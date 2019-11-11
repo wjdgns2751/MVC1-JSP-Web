@@ -1,0 +1,43 @@
++--------------+---------------+------+-----+---------+-------+
+| Field        | Type          | Null | Key | Default | Extra |
++--------------+---------------+------+-----+---------+-------+
+|bbsID        | int(11)       | NO   | PRI | NULL    |       |
+| bbsTitle     | varchar(50)   | YES  |     | NULL    |       |
+| userID       | varchar(20)   | YES  |     | NULL    |       |
+| bbsDate      | datetime      | YES  |     | NULL    |       |
+| bbsContent   | varchar(2048) | YES  |     | NULL    |       |
+| bbsAvailable | int(11)       | YES  |     | NULL    |       |
++--------------+---------------+------+-----+---------+-------+
+
+bbs - 게시판 구조
+
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| userID       | varchar(20) | NO   | PRI | NULL    |       |
+| userPassword | varchar(20) | YES  |     | NULL    |       |
+| userName     | varchar(20) | YES  |     | NULL    |       |
+| userGender   | varchar(20) | YES  |     | NULL    |       |
+| userEmail    | varchar(50) | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+
+user- 회원 데이터베이스 구조
+
+CREATE TABLE USER(
+ bbsID  int(11)
+ bbsTitle varchar(50)
+ userID  varchar(20)
+ bbsDate  datetime 
+ bbsContent   varchar(2048)
+ bbsAvailable int(11)
+PRIMARY KEY(bbsID)
+);
+
+CREATE TABLE BBS(
+ bbsID  varchar(20) 
+ userPassword varchar(20)
+ userName  varchar(20)
+ userGender  varchar(20) 
+ userEmail   varchar(50)
+PRIMARY KEY(userID)
+);
